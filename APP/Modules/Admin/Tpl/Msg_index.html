@@ -1,0 +1,32 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>碎碎念-后台</title>
+<link rel="stylesheet" href="__PUBLIC__/css/css.css">
+</head>
+
+<body>
+<ul class="a_ul do">
+<li>序列</li>
+<li>时间</li>
+<li>姓名</li>
+<li>项目</li>
+<li>RMB(￥)</li>
+<li>操作</li>
+</ul>
+<foreach name='info' item='v' id="gx">
+<ul class="a_ul dx" id="a{:mt_rand(1,9)}">
+<li> {$v.id}</li>
+<li> {$v.time|date='y-m-d',###}</li>
+<li> <input name="" value="{$v.username}"></li>
+<li> <input name="" value="{$v.content}"></li>
+<li> <input name="" value="{$v.number}"></li>
+<li><a href="{:U('Admin/Msg/delete',array('id'=>$v['id']))}">删除</a>&nbsp;&nbsp;<a href="{:U('Admin/Msg/alter',array('id'=>$v['id']))}">编辑</a></li>
+</ul>
+</foreach>
+<div class="page">
+<span>{$page}</span>
+</div>
+</body>
+</html>

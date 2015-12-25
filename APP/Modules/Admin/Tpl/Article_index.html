@@ -1,0 +1,42 @@
+<include file="Common:header"/>
+<table class="table">
+<thead>
+<tr>
+<td>序列</td>
+<td>标题</td>
+<td>URL</td>
+<td>是否公开</td>
+<td>所属栏目</td>
+<td>添加时间</td>
+<td>操作</td>
+</tr>
+</thead>
+<tbody>
+<foreach name='article' item='v' id="gx">
+<tr>
+<td> {$v.id}</td>
+<td> {$v.title}</td>
+<td> <a href="{$v.imgurl}" target="new">{$v.imgurl}</a></td>
+<td><if condition="$v.sid neq '0'">不公开
+ <else />公开
+ </if></td>
+<td> {$v.c_name}</td>
+<td> {$v.time|date='y-m-d H:i',###}</td>
+<td>
+<if condition='ACTION_NAME eq "index"'>
+<a href="{:U('Admin/Article/torecycle',array('id'=>$v['id'],'type'=>1))}">删除</a>&nbsp;&nbsp;<a href="{:U('Admin/Article/amendart',array('id'=>$v['id'],'type'=>1))}">修改</a>
+<else/>
+<a href="{:U('Admin/Article/torecycle',array('id'=>$v['id'],'type'=>0))}">还原</a>&nbsp;&nbsp;<a href="{:U('Admin/Article/delete',array('id'=>$v['id']))}">彻底删除</a>
+</if>
+</td>
+</tr>
+</foreach>
+</tbody>
+</table>
+<if condition='ACTION_NAME eq "recycle"'><a href="{:U('Admin/Article/todelete',array('del'=>1))}">清空回收站</a></if>
+<div class="page">
+<span>{$page}</span>
+</div>
+</div>
+</body>
+</html>

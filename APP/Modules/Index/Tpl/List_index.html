@@ -1,0 +1,15 @@
+<include file="Common:header"/><foreach name='cl' item='r'><title>滴水不漏-{$r.name}</title><meta name="description" content="{$r.description}" /><meta name="keywords" content="{$r.keywords}"></foreach><include file="Common:nav"/><section class="main-b">
+<div class="main-ct-left">
+<article><ul>
+<p>首页<foreach name='parent' item='b'>><a href="__ROOT__{:U('/list/'.$b['ename'].'/','','')}">{$b.name}</a></foreach></p>
+<foreach name='article' item='v'>
+<li>
+<div class="ct-time">{$v.time|date="Y年m月d日",###}</div>
+<div class="ct-title"><a href="__ROOT__{:U('/post/'.$v['id'])}">{$v.title}</a></div>
+<p>{$v.summary}...<a href="__ROOT__{:U('/post/'.$v['id'])}">阅读全文</a></p>
+<p class="ct-p1">posted @{$v.time|date="Y-m-d H:s:i",###} {$v.name} 阅读({$v.click})</p>
+</li>
+</foreach></ul></article>
+<div>{$page}</div></div>
+
+<div class="main-ct-right"><include file="Common:left"/></div><div class="clear"></div></section><include file="Common:footer"/></body></html>

@@ -1,0 +1,20 @@
+<include file="Common:header"/>
+<form action="{:U(GROUP_NAME.'/Category/addCateHandle')}" method="post">
+<p>添加栏目分类</p><p><font style="color:#F00">*</font>
+分类栏目名称：<input name="name" type="text" required class="form-control"/></p><p>
+<font style="color:#F00">*</font>分类栏目别名(英文)：<input type="text" name="ename" required class="form-control"/></p><p>
+排序：<input type="text" name="sort" value="100" class="form-control"></p>
+<p>公开or自己用：
+<select name="csid" required class="form-control">
+<option value="1">自己用</option>
+<option value="0">公开</option>
+</select>
+</p>
+<p>
+<input type="hidden" name="pid" value="{$pid}">
+<input type="hidden" name="uid" value="{$Think.session.uid}">
+<input type="submit" value="添加栏目" class="btn btn-danger"></p>
+</form>
+</div>
+</body>
+</html>

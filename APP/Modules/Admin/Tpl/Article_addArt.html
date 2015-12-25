@@ -1,0 +1,33 @@
+<include file="Common:header"/>
+<p>网址导航添加</p>
+<form action="{:U(GROUP_NAME.'/Article/addArtHandle')}" method="post">
+<p>导航标题：<input type="text" name="title"  class="form-control" required></p>
+<p>导航分类：
+<select name="cid" required class="form-control">
+<option>===请选择分类===</option>
+<foreach name='column' item='v'>
+<option value="{$v.id}">{$v.html}{$v.name}</option>
+</foreach>
+</select>
+</p>
+<p>url：<input type="text" name="imgurl" class="form-control" required></p>
+<p>描述：<textarea name="summary" required class="form-control"></textarea>
+</p>
+<p>公开or隐藏：
+<select name="sid" required class="form-control">
+<option value="0">公开</option>
+<option value="1">隐藏</option>
+</select>
+</p>
+<foreach name='attr' item='v'>
+<input name="aid[]" type="checkbox" hidden="hidden" value="{$v.id}">
+</foreach>
+<textarea name="content" hidden="hidden">0</textarea>
+<input type="text" name="click" value="100" hidden="hidden">
+<input type="text" name="keywords" value="d" hidden="hidden">
+<input type="submit" value="提交" class="btn btn-danger">
+</form>
+</div>
+
+</body>
+</html>

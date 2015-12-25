@@ -1,0 +1,38 @@
+<include file="Common:header"/>
+<p>项目分类</p>
+<form action="{:U(GROUP_NAME.'/Category/sortCate')}" method="post">
+<table class="table">
+<thead>
+<tr>
+<td>id</td>
+<td>名称</td>
+<td>别名</td>
+<td>级别</td>
+<td>排序</td>
+<td>是否公开</td>
+<td>操作</td>
+</tr>
+</thead>
+<tbody>
+<foreach name='column' item='v' id="gx">
+<tr>
+<td> {$v.id}</td>
+<td>{$v.html}{$v.name}</td>
+<td>{$v.ename}</td>
+<td>{$v.level}级栏目</td>
+<td><input type="text" name="{$v.id}" value="{$v.sort}" class="form-control" style=" width:60px;"></td>
+<td>
+<if condition="$v.csid neq '0'">不公开
+ <else />公开
+ </if>
+</td>
+<td><a href="{:U('Admin/Category/delete',array('id'=>$v['id']))}">删除</a>&nbsp;&nbsp;<a href="{:U('Admin/Category/alterCate',array('id'=>$v['id']))}">编辑</a></td>
+</tr>
+</foreach>
+</tbody>
+</table>
+<input type="submit" value="重新排序" class="btn btn-danger">
+</form>
+</div>
+</body>
+</html>

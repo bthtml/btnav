@@ -1,0 +1,35 @@
+<include file="Common:header"/>
+
+添加用户
+<form action="{:U('Admin/Rbac/addUserHandle')}" method="post" >
+<p>用户名：<input type="text" name="usernamer" class="form-control" required></p><p>
+密码：<input type="password" name="password" class="form-control" required></p><p>
+邮箱：<input type="email" name="email" class="form-control" required></p>
+<p id='one'>
+所属角色：<select name="role_id[]" class="form-control" required>
+<option value="">选择角色</option>
+<foreach name='role' item='v'>
+<option value="{$v['id']}">{$v.name}({$v.remark})</option>
+</foreach>
+</select><span class="add_role">添加多一个角色</span></p>
+<p id='last'></p>
+
+<input type="submit" value="添加" class="btn btn-danger">
+</form>
+</div>
+
+<script type="text/javascript" src="__PUBLIC__/js/jquery-1.8.2.min.js"></script>
+<script type="text/javascript">
+$(function(){
+	$('.add_role').click(function(){
+		var obj=$(this).parents('#one').clone();
+		obj.find('.add_role').remove();
+		$('#last').before(obj);
+		});
+});
+</script>
+<style type="text/css">
+.add_role{ cursor:pointer; display:inline-block;}
+</style>
+</body>
+</html>

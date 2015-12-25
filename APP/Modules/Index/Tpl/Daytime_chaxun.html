@@ -1,0 +1,51 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>碎碎念-记录日常</title>
+<link rel="stylesheet" href="__PUBLIC__/css/css.css">
+</head>
+
+<body>
+<h1>碎碎念-记录日常</h1>
+<div class="fhsy"><a href="/index.php/Daytime/">首页</a><a href="/index.php/Daytime/addlzz.html">乱糟糟</a><a href="/index.php/Daytime/addalx.html">按顺序</a></div>
+<form action="{:U('Daytime/chaxun')}" method="post">
+<p>查询项目：</p><p>
+    <label>
+      <input type="radio" name="ccontent" value="米" id="RadioGroup1_3" required/>
+      米</label>
+    <label>
+      <input type="radio" name="ccontent" value="油" id="RadioGroup1_4" required/>
+      油</label>
+          <label>
+      <input type="radio" name="ccontent" value="盐" id="RadioGroup1_4" required/>
+      盐</label>
+               <label>
+      <input type="radio" name="ccontent" value="酱油" id="RadioGroup1_4" required/>
+      酱油</label>
+  </p>
+
+    <label>
+      <input type="submit" class="ann" value="查询" id="send-cha" />
+    </label> 
+
+</form>
+<p></p>
+<ul class="a_ul do">
+<li>序列</li>
+<li>时间</li>
+<li>姓名</li>
+<li>项目</li>
+<li>金钱</li>
+</ul>
+<foreach name='info' item='v' id="gx">
+<ul class="a_ul dx" id="a{:mt_rand(1,9)}">
+<li>{$v.id}</li>
+<li>{$v.time|date='y-m-d',###}</li>
+<li>{$v.username}</li>
+<li>{$v.content}</li>
+<li>{$v.number}</li>
+</ul><br/>
+</foreach>
+</body>
+</html>

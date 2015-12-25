@@ -1,0 +1,98 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>碎碎念-记录日常</title>
+<link rel="stylesheet" href="__PUBLIC__/css/css.css">
+<meta name="viewport" content="initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=0, width=device-width"/>
+<script type="text/javascript" src="__PUBLIC__/js/jquery-1.8.2.min.js"></script>
+<script type="text/javascript" src="__PUBLIC__/js/index.js"></script>
+<script type="text/javascript">
+var handleUrl='{:U("Index/Daytime/handle",'','')}';
+</script>
+</head>
+
+<body>
+<h1>碎碎念-记录日常</h1>
+<div class="fhsy"><a href="/index.php/Daytime/">首页</a><a href="/index.php/Daytime/addlzz.html">乱糟糟</a><a href="/index.php/Daytime/addalx.html">按顺序</a></div><p align="left">乱糟糟</p>
+<form action="" method="post">
+  <p>姓名：</p><p>
+  <label>
+    <input type="radio" name="username" value="周准权" id="RadioGroup1_0" required/>
+周准权</label>
+  <label>
+    <input type="radio" name="username" value="林浩斌" id="RadioGroup1_1" required/>
+    林浩斌</label>
+  <label>
+    <input type="radio" name="username" value="方毓灿" id="RadioGroup1_2" required/>
+    方毓灿</label>
+  </p>
+  <p>项目：</p><p>
+    <label>
+      <input type="radio" name="content" value="米" id="RadioGroup1_3" required/>
+      米</label>
+    <label>
+      <input type="radio" name="content" value="油" id="RadioGroup1_4" required/>
+      油</label>
+          <label>
+      <input type="radio" name="content" value="盐" id="RadioGroup1_5" required/>
+      盐</label>
+               <label>
+      <input type="radio" name="content" value="酱油" id="RadioGroup1_6" required/>
+      酱油</label>
+  </p>
+  <p>时间：<input type="date"  name="wtime" required/></p>
+  <p>金钱：<input type="number" name="number" min="0" max="200" step="0.1" required> RMB</p>
+
+    <label>
+      <input type="submit" class="ann" value="提交" id="send-btn" value="tj"/>
+    </label> 
+
+</form>
+<form action="{:U('Daytime/chaxun')}" method="post">
+<p>查询项目：</p><p>
+    <label>
+      <input type="radio" name="ccontent" value="米" id="RadioGroup1_3" required/>
+      米</label>
+    <label>
+      <input type="radio" name="ccontent" value="油" id="RadioGroup1_4" required/>
+      油</label>
+          <label>
+      <input type="radio" name="ccontent" value="盐" id="RadioGroup1_4" required/>
+      盐</label>
+               <label>
+      <input type="radio" name="ccontent" value="酱油" id="RadioGroup1_4" required/>
+      酱油</label>
+  </p>
+
+    <label>
+      <input type="submit" class="ann" value="查询" id="send-cha" />
+    </label> 
+
+</form>
+<!---->
+<p align="center">乱糟糟</p>
+<ul class="a_ul do c1">
+<li>序列</li>
+<li>时间</li>
+<li>姓名</li>
+<li>项目</li>
+<li>金钱</li>
+</ul>
+<div id="zxfb">
+<foreach name='info' item='v' id="gx">
+<ul class="a_ul dx" id="a{:mt_rand(1,9)}">
+<li>{$v.id}</li>
+<li>{$v.time|date='y-m-d',###}</li>
+<li>{$v.username}</li>
+<li>{$v.content}</li>
+<li>{$v.number}</li>
+</ul><br/>
+</foreach>
+</div>
+<!---->
+</div>
+
+
+</body>
+</html>

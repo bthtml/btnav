@@ -1,0 +1,41 @@
+@charset "utf-8";
+/* CSS Document */
+body{ font-family:'Microsoft Yahei'}
+.navbar-margin{ margin-top:40px; margin-bottom:40px}
+.navbar-no-margin{ margin-bottom:0px;}
+.container-padding-top{ padding-top:60px;}
+.container-padding{ margin-bottom:40px;}
+.container-padding h1{ font-size:80px; padding-top:30px;}
+.container-padding p{ padding-bottom:40px;}
+.img-size img{border: 1px solid #ddd;border-radius: .25rem; min-height:233px; max-height:233px; min-width:350px;}
+.bg-gray{ background-color:#efefef;}
+.bg-bule{background-color:#61B3E6; color:#FFF;}
+.bg-white{ background-color:#FFF;}
+.div-border{ border: 1px solid #ddd;border-radius: .25rem;}
+.div-border-left{ border-left:1px solid #efefef;border-radius: .25rem;}
+.div-border-right{ border-right:1px solid #ccc;border-radius: .25rem;}
+.div-padding-l{ padding-left:30px; padding-right:20px;}
+.div-padding-r{ padding-right:30px; padding-left:20px;}
+.div-padding-tb{ padding-top:20px; padding-bottom:20px;}
+.div-conter{ margin:0 auto; display:block;}
+.portrait-border{ border:3px #ccc solid; padding:4px;}
+.margin-l{ margin-left:10px;}
+.dian{ background:url(/public/img/dian.jpg) repeat-x center;}
+.dian span{ background-color:#FFF; padding-right:20px;}
+.ul-li-p{ line-height:34px;}
+.round{ border-radius: 1rem; background-color:#666; color:#FFF; padding:6px; margin-right:10px;}
+.sidebar ul{background-color:#61B3E6;}
+.sidebar ul li{background-color:#61B3E6; border-bottom:1px solid #55A5D8;}
+.sidebar ul a:hover{background-color:#55A5D8;}
+.sidebar ul li a{ color:#FFF}
+.active a{background-color:#55A5D8;}
+.item .row{ padding-left:19px; padding-right:0px;}
+.item h4{background-color:#55A5D8; padding-top:10px; padding-bottom:10px; color:#FFF}
+.item ul li{ background-color:#FFF; margin-left:4px; margin-right:4px; border-bottom: 15px solid #fff; float:left; width:19%; height:89px; padding:15px; margin-bottom:8px; font-size:12px;  overflow:hidden; color:#aaa}
+.item ul li a{ color:#61B3E6; font-size:16px; font-weight:bold;}
+.item ul li a:hover{ background-color:inherit; color:#F60;}
+@media screen and (max-width : 900px) {
+.img-size img{min-height:auto;max-height:auto;min-width:auto;}
+.item .row{ padding-left:15px; padding-right:15px; text-align:center}
+.item ul li{ width:47%;}
+}

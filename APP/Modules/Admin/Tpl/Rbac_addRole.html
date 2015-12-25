@@ -1,0 +1,19 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>添加角色</title>
+</head>
+
+<body>
+添加角色
+<form action="{:U('Admin/Rbac/addRoleHandle')}" method="post" >
+角色名称：<input type="text" name="name">
+角色描述：<input type="text" name="remark">
+是否开启：
+<input type="radio" name="status" value="1" checked> 开启
+<input type="radio" name="status" value="0"> 关闭
+<input type="submit" value="添加">
+</form>
+</body>
+</html>

@@ -1,0 +1,34 @@
+@charset "utf-8";
+/* CSS Document */
+body{ margin:0 auto; padding:10px 0px 0px 0px;}
+div{ margin:0px; padding:0px; border:0px;}
+p{ margin:0px; padding:0px; border:0px; line-height:24px;}
+a{color:#333333;  text-decoration:none;}
+a:hover{color:#ff3300; text-decoration:none}
+ul{margin:0px; padding:0px; border:0px; list-style-type:none}
+li{ margin:0px; border:0px;}
+img{ border:0px; margin:0px;}
+h1 {
+  margin: 0;
+  text-align:center;
+font: bold 16px/1 "Helvetica Neue", Helvetica, Arial, sans-serif;
+color: #d41115;
+text-shadow: 0 1px 0 #cccccc, 0 2px 0 #c9c9c9, 0 3px 0 #bbbbbb, 0 4px 0 #b9b9b9, 0 5px 0 #aaaaaa, 0 6px 1px rgba(0, 0, 0, 0.1), 0 0 5px rgba(0, 0, 0, 0.1), 0 1px 3px rgba(0, 0, 0, 0.3), 0 3px 5px rgba(0, 0, 0, 0.2), 0 5px 10px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.2), 0 20px 20px rgba(0, 0, 0, 0.15);
+-webkit-transition: .2s all linear;
+}
+form{ padding:0px; margin:0px;}
+.clear{ clear:both}
+.left{ float:left;}
+.right{ float:right;}
+.red{ color:#F00;}
+
+.a_ul{ width:100%; height:auto; margin:0 auto;  float:left; border-bottom:1px #CCCCCC solid;}
+.a_ul li{float:left; line-height:24px; width:10%; border-right:1px #CCCCCC solid;}
+.a_ul input{line-height:24px; height:24px; text-align:center; width:100%;}
+.dx{font-size:12px; color:#333;text-align:center; }
+.do{font-size:14px; background:#e78c00; height:24px; color:#FFF; font-weight:bold; text-align:center;}
+.a1{ background:#333}
+
+.btc{ width:300px;}
+.page{ text-align:center; line-height:24px; }
+

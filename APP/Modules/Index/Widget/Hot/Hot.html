@@ -1,0 +1,4 @@
+<hr>
+<foreach name='article' item='v'>
+<p><a href="{:U('/post/'.$v['id'])}">{$v.title}</a><span>{$v.click}</span></p>
+</foreach>

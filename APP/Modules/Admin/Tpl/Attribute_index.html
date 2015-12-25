@@ -1,0 +1,25 @@
+<include file="Common:header"/>
+<p>属性分类</p>
+<table class="table">
+<thead>
+<tr>
+<td>id</td>
+<td>名称</td>
+<td>颜色</td>
+<td>操作</td>
+</tr>
+</thead>
+<tbody>
+<foreach name='attr' item='v' id="gx">
+<tr id="a{:mt_rand(1,9)}">
+<td> {$v.id}</td>
+<td>{$v.name}</td>
+<td><input type="color" value="{$v.color}"></td>
+<td><a href="{:U('Admin/Msg/delete',array('id'=>$v['id']))}">删除</a>&nbsp;&nbsp;<a href="{:U('Admin/Msg/alter',array('id'=>$v['id']))}">编辑</a></td>
+</tr>
+</foreach>
+</tbody>
+</table>
+</div>
+</body>
+</html>

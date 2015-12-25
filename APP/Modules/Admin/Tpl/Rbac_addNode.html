@@ -1,0 +1,23 @@
+<include file="Common:header"/>
+-添加{$type}
+<form action="{:U('Admin/Rbac/addNodeHandle')}" method="post" >
+{$type}名称：<input type="text" name="name" class="form-control" required/><br>
+{$type}描述：<input type="text" name="title" class="form-control" required/><br>
+是否开启：
+<p>
+  <label>
+    <input type="radio" name="status" value="1" checked/>
+    开启</label>
+  <label>
+    <input type="radio" name="status" value="0" />
+    关闭</label>
+  <br>
+</p>
+排序：<input type="text" name="sort" value="1" class="form-control"/><br>
+<input type="hidden" name="pid" value="{$pid}">
+<input type="hidden" name="level" value="{$level}">
+<input type="submit" value="添加" class="btn btn-danger">
+</form>
+</div>
+</body>
+</html>

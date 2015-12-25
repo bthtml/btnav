@@ -1,0 +1,42 @@
+﻿<include file="Common:header"/>
+<body class="bg-gray">
+<include file="Common:nav"/>
+
+
+
+
+<div class="col-xs-12 col-md-2"></div>
+
+<div class="col-xs-12 col-md-10">
+<div class="container">
+<div class="row">
+
+<div class="col-xs-12 col-md-10">
+
+<foreach name="columns" item="value">
+<if condition="$value.article neq NULL">
+<div class="row item" id='url-{$value.id}'>
+<div class="row">
+<h4 class="col-md-2 col-xs-12">{$value.name}</h4>
+</div>
+<ul class="list-unstyled">
+<foreach name="value.article" item="v">
+<if condition="$v.del neq 1">
+<li><a href="{$v.imgurl}" target="new">{$v.title}</a><br>{$v.summary}</li>
+</if>
+</foreach>
+</ul>
+</div>
+</if>
+</foreach>
+
+
+</div> 
+
+  </div> 
+</div>        
+
+</div>
+
+<include file="Common:footer"/>
+</body></html>

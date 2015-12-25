@@ -1,0 +1,36 @@
+<include file="Common:usheader"/>
+<body class="bg-gray" style="margin-top:52px;" data-spy="scroll" data-target="#navbar-example" data-offset="0">
+<include file="Common:usnav"/>
+
+<div class="col-xs-12 col-md-12"  id="navbar-example">
+<div class="container">
+<div class="row">
+
+<div class="col-xs-12 col-md-12">
+
+<foreach name="columns" item="value">
+<if condition="$value.article neq NULL">
+<div class="row item" id='url-{$value.id}'>
+<div class="row">
+<h4 class="col-md-2 col-xs-12">{$value.name}</h4>
+</div>
+
+<ul class="list-unstyled">
+<foreach name="value.article" item="v">
+<li><a href="{$v.url}" target="new">{$v.title}</a><br>{$v.summary}</li>
+</foreach>
+</ul>
+</div>
+ </if>
+</foreach>
+
+
+</div> 
+
+  </div> 
+</div>        
+
+</div>
+
+<include file="Common:usfooter"/>
+</body></html>

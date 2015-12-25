@@ -1,0 +1,24 @@
+<include file="Common:header"/>
+<form action="{:U('Admin/Msg/update')}" method="post">
+<ul class="a_ul do">
+<li>序列</li>
+<li>时间</li>
+<li>姓名</li>
+<li>项目</li>
+<li>RMB(￥)</li>
+<li>操作</li>
+</ul>
+<foreach name='info' item='v' id="gx">
+<ul class="a_ul dx" id="a{:mt_rand(1,9)}">
+<li><input name="id" type="text" required value="{$v.id}" readonly></li>
+<li> {$v.time|date='y-m-d',###}</li>
+<li> <input type="text" name="name" value="{$v.username}" required></li>
+<li> <input type="text" name="content" value="{$v.content}" required></li>
+<li> <input name="number" value="{$v.number}" type="number"  min="0" max="200" step="0.1" required></li>
+<li><input type="submit" title="修改" value="修改" style="cursor:pointer;"></li>
+</ul>
+</foreach>
+</form>
+</div>
+</body>
+</html>

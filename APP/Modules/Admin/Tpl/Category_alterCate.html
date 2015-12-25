@@ -1,0 +1,24 @@
+<include file="Common:header"/>
+<foreach name='column' item='v'>
+<form action="{:U(GROUP_NAME.'/Category/alterCateHandle')}" method="post">
+<p>修改栏目分类</p><p>
+<font style="color:#F00">*</font>分类栏目名称：<input name="name" type="text" value="{$v.name}" class="form-control" required/></p><p>
+<font style="color:#F00">*</font>分类栏目别名(英文)：<input type="text" name="ename" value="{$v.ename}" class="form-control" required/></p>
+<p>公开or隐藏：
+<select name="csid" required class="form-control">
+<if condition="$v.csid neq '0'">
+<option value="0">公开</option>
+<option value="1" selected>隐藏</option>
+ <else /> <option value="0" selected>公开</option>
+<option value="1" >隐藏</option>
+ </if>
+</select>
+</p>
+<p>
+<input type="hidden" name="id" value="{$v.id}">
+<input type="submit" value="修改栏目" class="btn btn-danger"></p>
+</form>
+</foreach>
+</div>
+</body>
+</html>

@@ -1,0 +1,28 @@
+<include file="Common:header"/>
+<p>修改导航</p>
+<form action="{:U(GROUP_NAME.'/Article/amendartHandle')}" method="post">
+<p>
+<foreach name='article' item='v' id="gx">
+<input type="hidden" value="{$v.id}" name="id">
+导航标题：<input type="text" name="title" required value="{$v.title}"  class="form-control"></p>
+<p>url：<input type="text" name="imgurl" value="{$v.imgurl}"  class="form-control" required></p>
+<p>导航描述：
+<textarea name="summary" required  class="form-control">{$v.summary}</textarea>
+</p>
+<p>公开or隐藏：
+<select name="sid" required class="form-control">
+<if condition="$v.sid neq '0'">
+<option value="0">公开</option>
+<option value="1" selected>隐藏</option>
+ <else /> <option value="0" selected>公开</option>
+<option value="1" >隐藏</option>
+ </if>
+</select>
+</p>
+</foreach>
+<input type="submit" value="保存" class="btn btn-danger">
+</form>
+</div>
+
+</body>
+</html>

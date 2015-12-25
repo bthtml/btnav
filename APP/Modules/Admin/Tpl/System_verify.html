@@ -1,0 +1,17 @@
+<include file="Common:header"/>
+<form action="{:U(GROUP_NAME.'/System/updateVerify')}" method="post">
+<p>验证码长度：<input type="text" name="VERIFY_LENGTH" value="{$Think.config.VERIFY_LENGTH}"></p>
+<p>验证码图片宽度(像素)：<input type="text" name="VERIFY_WIDTH" value="{$Think.config.VERIFY_WIDTH}"></p>
+<p>验证码图片高度(像素)：<input type="text" name="VERIFY_HEIGHT" value="{$Think.config.VERIFY_HEIGHT}"></p>
+<p>验证码背影颜色(16进制色值)：<input type="text" name="VERIFY_BGCOLOR" value="{$Think.config.VERIFY_BGCOLOR}"></p>
+<p>验证码种子：<input type="text" name="VERIFY_SEED" value="{$Think.config.VERIFY_SEED}"></p>
+<p>验证码字体文件：<input type="text" name="VERIFY_FONTFILE" value="{$Think.config.VERIFY_FONTFILE}"></p>
+<p>验证码字体大小：<input type="text" name="VERIFY_SIZE" value="{$Think.config.VERIFY_SIZE}"></p>
+<p>验证码字体颜色(16进制色值)：<input type="text" name="VERIFY_COLOR" value="{$Think.config.VERIFY_COLOR}"></p>
+<p>SESSION识别名称:<input type="text" name="VERIFY_NAME" value="{$Think.config.VERIFY_NAME}"></p>
+<p>存储验证码到SESSION时使用函数:<input type="text" name="VERIFY_FUNC" value="{$Think.config.VERIFY_FUNC}"></p>
+<p><input type="submit" value="更新"></p>
+</form>
+</div>
+</body>
+</html>
